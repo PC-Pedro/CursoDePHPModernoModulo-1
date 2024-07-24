@@ -1,9 +1,12 @@
 <?php
-for ($i=1; $i <= 1000; $i++) {
+for ($i=0; $i <= 1000; $i++) {
    
-    $i = $i * 0.10;
+    
 
-   if($i % 2 != 0 || $i < 1) {
+   if($i % 2 != 0) {
+    echo "$i é impar" ."<br>";
+   }
+   elseif($i < 1 && $i > 0){
     echo "$i é impar" ."<br>";
    }
    else {
