@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultado</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -11,10 +12,11 @@
     </header>
     <main>
         <?php
-          $n = $_GET["nome"];
-          $s = $_GET["sobrenome"];
-          echo "<p>É um prazer te conhecer, $n $s, esse é meu site";
+          $n = $_GET["nome"] ?? "sem nome";
+          $s = $_GET["sobrenome"] ?? "desconhecido";
+          echo "<p>É um prazer te conhecer, <strong>$n $s</strong>, esse é meu site";
         ?>
+        <p><a href="javascript:history.go(-1)">Voltar para a página anterior</a></p>
     </main>
 </body>
 </html>
